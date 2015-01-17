@@ -1,18 +1,18 @@
 
-public class TeachersPet extends StudentBot{
+public class TeachersPet extends StudentBot{			//TeachersPet is subclass of StudentBot
 
 	public TeachersPet(String aName)
 	{
-		super(aName);
+		super(aName);								//creates object by invoking its superclasses's constructor
 	}
 	
-	public String respondToGreeting(String greeting)
+	public String respondToGreeting(String greeting)		//creates a greeting that addresses the users name and then use default greetings
 	{
-		String s = super.respondToGreeting(greeting);
+		String s = super.respondToGreeting(greeting);				
 		int i = greeting.indexOf("name is");
-		if (i>0)
-		{
-			s += greeting,substring(i+7);
+		if (i>0)								//if the trigger word "name is" is present, it will take everything after the phrase	
+		{										//of the trigger word (hence the i+7 since its 7 characters long) and use its default greeting
+			s += greeting,substring(i+7);		//before its extract
 		}
 		
 		else
